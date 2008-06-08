@@ -4,12 +4,18 @@ Release:	%mkrel 1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Source0:        http://wallpapoz.akbarhome.com/files/%name-%version.tar.bz2
-URL:		http://kmess.sourceforge.net
+URL:		http://wallpapoz.akbarhome.com
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 %py_requires
 BuildRequires:	pygtk2.0
 BuildRequires:	gnome-python
 BuildRequires:	python-imaging
+BuildRequires:	pygtk2.0-libglade
+Requires:	pygtk2.0
+Requires:	gnome-python
+Requires:	python-imaging
+Requires:	pygtk2.0-libglade
+BuildArch:	noarch
 Summary:	Gnome Desktop Wallpapers Configuration Tool
 
 %description
@@ -19,6 +25,12 @@ specified time has passed.
 
 %files -f %name.lang
 %defattr(-,root,root)
+%doc README CHANGELOG
+%_bindir/daemon_wallpapoz
+%_bindir/wallpapoz
+%_datadir/wallpapoz
+%_datadir/pixmaps/wallpapoz.png
+%_datadir/applications/wallpapoz.desktop
 
 %prep
 %setup -q
@@ -28,5 +40,14 @@ rm -fr %buildroot
 mkdir -p %buildroot%_prefix
 ./setup.py install --installdir %buildroot%_prefix
 
+%find_lang %name --with-gnome
+
 %clean
 rm -fr %buildroot
+
+%post
+%update_menus
+
+%postun
+%clean_menus
+
