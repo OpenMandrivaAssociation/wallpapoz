@@ -45,9 +45,13 @@ mkdir -p %buildroot%_prefix
 %clean
 rm -fr %buildroot
 
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
