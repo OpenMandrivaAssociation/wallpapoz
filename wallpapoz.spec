@@ -1,6 +1,6 @@
 Name:		wallpapoz
 Version:	0.4.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Source0:        http://wallpapoz.akbarhome.com/files/%name-%version.tar.bz2
@@ -15,8 +15,9 @@ Requires:	pygtk2.0
 Requires:	gnome-python
 Requires:	python-imaging
 Requires:	pygtk2.0-libglade
+Requires:	xwininfo
 BuildArch:	noarch
-Summary:	Gnome Desktop Wallpapers Configuration Tool
+Summary:	Gnome Desktop wallpaper configuration tool
 
 %description
 Wallpapoz application enables you to configure Gnome desktop wallpapers
