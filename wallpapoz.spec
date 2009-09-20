@@ -1,6 +1,6 @@
 Name:		wallpapoz
 Version:	0.4.1
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Source0:        http://wallpapoz.akbarhome.com/files/%name-%version.tar.bz2
