@@ -11,6 +11,7 @@ BuildRequires:	pygtk2.0
 BuildRequires:	gnome-python
 BuildRequires:	python-imaging
 BuildRequires:	pygtk2.0-libglade
+BuildRequires:	python-devel
 Requires:	pygtk2.0
 Requires:	gnome-python
 Requires:	python-imaging
