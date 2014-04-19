@@ -6,7 +6,6 @@ License:	GPLv2+
 Source0:        http://wallpapoz.akbarhome.com/files/%name-%version.tar.bz2
 URL:		http://wallpapoz.akbarhome.com
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
-%py_requires
 BuildRequires:	pygtk2.0
 BuildRequires:	python-imaging
 BuildRequires:	pygtk2.0-libglade
