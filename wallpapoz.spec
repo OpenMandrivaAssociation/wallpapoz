@@ -4,7 +4,7 @@ Release:	2
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Source0:        http://wallpapoz.akbarhome.com/files/%name-%version.tar.bz2
-URL:		http://wallpapoz.akbarhome.com
+URL:		https://wallpapoz.akbarhome.com
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	pygtk2.0
 BuildRequires:	python-imaging
